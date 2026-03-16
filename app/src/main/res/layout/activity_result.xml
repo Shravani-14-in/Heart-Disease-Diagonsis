@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_deep"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_heart"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:text="HeartScan"
+                android:textSize="18sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="sans-serif-light"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Results"
+                android:textSize="12sp"
+                android:textColor="@color/text_muted"
+                android:letterSpacing="0.1"/>
+
+        </LinearLayout>
+
+        <!-- Risk Score Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_border"
+            android:padding="28dp"
+            android:gravity="center"
+            android:layout_marginTop="28dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HEART DISEASE RISK"
+                android:textSize="11sp"
+                android:textColor="@color/text_muted"
+                android:letterSpacing="0.2"
+                android:fontFamily="sans-serif-medium"/>
+
+            <!-- Circular Score -->
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="20dp">
+
+                <com.health.heartdiagnosis.CircularProgressView
+                    android:id="@+id/circularProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="52sp"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="sans-serif-light"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="%"
+                        android:textSize="18sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginTop="-8dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvRiskLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="LOW RISK"
+                android:textSize="20sp"
+                android:textColor="@color/risk_low"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.05"/>
+
+            <TextView
+                android:id="@+id/tvRiskDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Your risk indicators are within normal range"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <!-- Risk Breakdown -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="RISK BREAKDOWN"
+            android:textSize="11sp"
+            android:textColor="@color/text_muted"
+            android:letterSpacing="0.2"
+            android:fontFamily="sans-serif-medium"/>
+
+        <LinearLayout
+            android:id="@+id/llBreakdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Key Findings -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="KEY FINDINGS"
+            android:textSize="11sp"
+            android:textColor="@color/text_muted"
+            android:letterSpacing="0.2"
+            android:fontFamily="sans-serif-medium"/>
+
+        <LinearLayout
+            android:id="@+id/llFindings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Health Tips -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="PERSONALISED TIPS"
+            android:textSize="11sp"
+            android:textColor="@color/text_muted"
+            android:letterSpacing="0.2"
+            android:fontFamily="sans-serif-medium"/>
+
+        <LinearLayout
+            android:id="@+id/llTips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"/>
+
+        <!-- When to See Doctor -->
+        <LinearLayout
+            android:id="@+id/llDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card_border"
+            android:padding="18dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🏥"
+                android:textSize="24sp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See a Doctor"
+                    android:textSize="15sp"
+                    android:textColor="@color/text_primary"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <TextView
+                    android:id="@+id/tvDoctorAdvice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Schedule a routine check-up within the next 12 months."
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"
+                    android:lineSpacingMultiplier="1.4"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Disclaimer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card_border"
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚠️"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:text="This is an informational tool only and does not constitute a medical diagnosis. Always consult a licensed healthcare professional."
+                android:textSize="11sp"
+                android:textColor="@color/text_muted"
+                android:lineSpacingMultiplier="1.5"/>
+
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRetake"
+            style="@style/ButtonPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="24dp"
+            android:text="Retake Assessment"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShare"
+            style="@style/ButtonOutlined"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="32dp"
+            android:text="Share Results"/>
+
+    </LinearLayout>
+</ScrollView>

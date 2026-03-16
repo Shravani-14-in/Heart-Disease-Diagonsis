@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivHeart"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_heart"
+            android:alpha="0"/>
+
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="HeartScan"
+            android:textSize="36sp"
+            android:textColor="#F0F6FC"
+            android:letterSpacing="0.05"
+            android:fontFamily="sans-serif-light"
+            android:alpha="0"/>
+
+        <TextView
+            android:id="@+id/tvTagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Know Your Heart Health Risk"
+            android:textSize="14sp"
+            android:textColor="#8B949E"
+            android:letterSpacing="0.1"
+            android:alpha="0"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llLoader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:alpha="0">
+
+        <ProgressBar
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:indeterminateTint="#C0392B"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Initializing..."
+            android:textSize="12sp"
+            android:textColor="#484F58"
+            android:letterSpacing="0.1"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
