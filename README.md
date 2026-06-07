@@ -1,4 +1,4 @@
-# CardioScan — Heart Disease Risk Analyzer
+#  Heart Disease Diagnosis
 
 > An Android application that predicts heart disease risk using a multi-factor assessment engine and delivers personalized health recommendations.
 
@@ -6,7 +6,7 @@
 
 ## Overview
 
-CardioScan is a mobile health tool that evaluates a user's cardiovascular risk based on clinical and lifestyle inputs. A weighted scoring engine processes the responses and generates a risk score between 0–100, visualized as an animated circular gauge. Based on the score, the app provides a personalized action plan with diet, lifestyle, and medical recommendations.
+Heart Disease Diagnosis is a mobile health tool that evaluates a user's cardiovascular risk based on clinical and lifestyle inputs. A weighted scoring engine processes the responses and generates a risk score between 0–100, visualized as an animated circular gauge. Based on the score, the app provides a personalized action plan with diet, lifestyle, and medical recommendations.
 
 Built entirely in native Android (Java + XML) with no external APIs — fully offline.
 
